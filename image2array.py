@@ -53,16 +53,16 @@ print len(matrix[0])	#columns of matrix
 
 
 
-maize_reduced = [[0 for x in range(7)] for y in range(7)]
+maize_reduced = [[0 for x in range(5)] for y in range(15)]
 
-for i in xrange(0,700,10):
-  for j in xrange(0,700,10):
+for i in xrange(0,700,7):
+  for j in xrange(0,700,7):
 	c_0=0
 	c_1=0
 	c_5=0
-	for k in range(i,i+10):
+	for k in range(i,i+7):
 		
-		for l in range(j,j+10):
+		for l in range(j,j+7):
 			#print "("+str(k)+","+str(l)+")"
 			
 			if matrix[k][l]==0:
@@ -72,14 +72,14 @@ for i in xrange(0,700,10):
 			else:
 				c_5+=1 
 			
-	d = {'1': c_0, '9': c_1, '0': c_5}
+	d = {'.': c_0, '9': c_1, '#': c_5}
 	#print str(c_0)+","+str(c_1)+","+str(c_5)+"-- "+max(d, key=d.get)
-	big = int(max(d,key=d.get))
+	big = 	max(d,key=d.get)
 	#maize_reduced[i%10][j%10]=big
 	#print maize_reduced
 	#print j%10
-	sys.stdout.write(str(big)+" ")
-  print "\n"   
+	sys.stdout.write(str(big))
+  sys.stdout.write("\n") 
 #print matrix
 
 
