@@ -19,7 +19,7 @@ print cols
 im.setflags(write=1)
 for i in range(1,rows-1): 
    for j in range(1,cols-1):
-	if im[i][j]!=255 and im[i][j-1]!=im[i][j+1] :
+	if im[i][j]!=255 and im[i-1][j]!=im[i+1][j] :
 		im[i][j]=255
 img = Image.fromarray(im)
 img.show()
