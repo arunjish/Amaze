@@ -7,7 +7,7 @@ numpy.set_printoptions(threshold=numpy.nan)
 
 
 
-im=numpy.asarray(Image.open('maze_black_white.jpg').convert('L'))
+im=numpy.asarray(Image.open('poopy.jpg').convert('L'))
 #print im
 print im.shape
 shape= im.shape
